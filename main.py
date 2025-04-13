@@ -8,10 +8,15 @@ from commands import (
     utils
 )
 
+# Create session directory if it doesn't exist
+if not os.path.exists("sessions"):
+    os.makedirs("sessions")
+
 app = Client(
     Config.SESSION_NAME,
     api_id=Config.API_ID,
-    api_hash=Config.API_HASH
+    api_hash=Config.API_HASH,
+    workdir="sessions"  # Store session files in a dedicated directory
 )
 
 # Load sudo users from file at startup

@@ -14,7 +14,7 @@ def register_handlers(app: Client):
             await message.reply("Joining video chat...")
             await play_video(client, chat_id, replied)
         else:
-            await message.reply("Please reply to a video or audio file with /play")
+            await message.reply("Please reply to a video or audio file with /play sir")
 
     @app.on_message(filters.command("pause"))
     @sudo_only

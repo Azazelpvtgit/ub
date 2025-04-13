@@ -36,17 +36,3 @@ utils.register_handlers(app)
 
 if __name__ == "__main__":
     app.run()
-from pyrogram.types import AudioParameters, VideoParameters
-
-# Set higher quality
-AudioParameters = AudioParameters(
-    bitrate=128000,  # Higher quality
-    channels=2,
-    sample_rate=48000
-)
-
-VideoParameters = VideoParameters(
-    width=1280,
-    height=720,
-    frame_rate=30
-        )
